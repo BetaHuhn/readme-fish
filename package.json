@@ -28,7 +28,7 @@
 	"bugs": {
 		"url": "https://github.com/betahuhn/readme-fish/issues"
 	},
-	"homepage": "https://readme.mxis.workers.dev",
+	"homepage": "https://readme.fish",
 	"devDependencies": {
 		"@cloudflare/workers-types": "^2.2.2",
 		"@cloudflare/wrangler": "^1.19.0",

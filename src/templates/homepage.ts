@@ -33,7 +33,7 @@ export default ():HTML => {
 		<div id="file" class="md" data-path="README.md">
 			<article class="markdown-body entry-content container-lg" itemprop="text">
 			<h1>${ title }</h1>
-			<p>README Fish dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply specify the GitHub repo as the path of this website, similar to how a repo is accessed on GitHub: <code>/username/repo</code>.</p>
+			<p>README Fish dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply specify the GitHub repo as the path of this website, similar to how a repo is accessed on GitHub e.g. <code>readme.fish/username/repo</code>.</p>
 			<p>Try <a href="/betahuhn/readme-fish">this</a> repo as an example!</p>
 			<p>
 				<a href="https://github.com/BetaHuhn/readme-fish">Source on GitHub</a>
