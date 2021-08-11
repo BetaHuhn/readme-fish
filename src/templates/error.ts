@@ -5,7 +5,7 @@ import { HTML, html } from '@worker-tools/html'
 export default (errorTitle: string, message: string):HTML => {
 	const title = `${ errorTitle } - ReadMe.fish`
 	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file.'
-	const image = 'https://cdn.mxis.ch/static/banner.png'
+	const image = 'https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/social.png'
 
 	return html`
 <html>
@@ -14,6 +14,11 @@ export default (errorTitle: string, message: string):HTML => {
 	<title>${ title }</title>
 	<meta name="title" content="${ title }">
 	<meta name="description" content="${ description }">
+
+	<link rel="shortcut icon" type="image/x-icon" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/logoBackground.png">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">

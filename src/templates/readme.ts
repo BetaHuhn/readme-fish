@@ -10,6 +10,11 @@ export default (repo: any, content: string):HTML => html`
     <meta name="title" content="${ repo.title }">
     <meta name="description" content="${ repo.description }">
 
+    <link rel="shortcut icon" type="image/x-icon" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/logoBackground.png">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="${ repo.title }">
