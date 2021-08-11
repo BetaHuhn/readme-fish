@@ -3,7 +3,7 @@ import { HTML, html } from '@worker-tools/html'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default ():HTML => {
-	const title = 'README Fish - Static READMEs'
+	const title = 'ReadMe.fish - Static READMEs'
 	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file.'
 	const image = 'https://cdn.mxis.ch/static/banner.png'
 
@@ -29,11 +29,16 @@ export default ():HTML => {
 </head>
 
 <body>
+	<div class="image-wrapper">
+		<img src="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/logoBackground.png" alt="ReadMe.fish Logo">
+		<h1>ReadMe.fish</h1>
+		<p>Blazingly fast statically hosted GitHub READMEs</p>
+	</div>
 	<div id='content'>
 		<div id="file" class="md" data-path="README.md">
 			<article class="markdown-body entry-content container-lg" itemprop="text">
-			<h1>${ title }</h1>
-			<p>README Fish dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply specify the GitHub repo as the path of this website, similar to how a repo is accessed on GitHub e.g. <code>readme.fish/username/repo</code>.</p>
+			<h1>README.md</h1>
+			<p>ReadMe.fish dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply specify the GitHub repo as the path of this website, similar to how a repo is accessed on GitHub e.g. <code>readme.fish/username/repo</code>.</p>
 			<p>Try <a href="/betahuhn/readme-fish">this</a> repo as an example!</p>
 			<p>
 				<a href="https://github.com/BetaHuhn/readme-fish">Source on GitHub</a>
@@ -55,6 +60,28 @@ export default ():HTML => {
 			font-feature-settings: "kern"1;
 			font-kerning: normal;
 			padding: 30px;
+		}
+
+		.image-wrapper {
+			max-width: 900px;
+			margin: auto;
+			margin-bottom: auto;
+			text-align: center;
+			margin-bottom: 5rem;
+		}
+
+		.image-wrapper img {
+			max-width: 250px;
+		}
+
+		.image-wrapper h1 {
+			color: #152b46;
+		}
+
+		.image-wrapper p {
+			color: #49cb8a;
+			font-weight: 600;
+			font-size: 1.1rem;
 		}
 
 		@media only screen and (max-width: 600px) {

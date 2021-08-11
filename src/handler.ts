@@ -23,7 +23,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 
 		// Render homepage
 		if (!requestPath || parts.length !== 2) {
-			const cacheKey = `https://readme2.mxis.ch/`
+			const cacheKey = `https://readme.fish/homepage.html`
 			let res = await cache.match(cacheKey)
 
 			if (!res) {
@@ -45,7 +45,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 			name: parts[1]
 		}
 
-		const cacheKey = `https://readme2.mxis.ch/${ repo.owner }/${ repo.name }`
+		const cacheKey = `https://readme.fish/${ repo.owner }/${ repo.name }.html`
 		let res = await cache.match(cacheKey)
 
 		const cacheStatus = res ? 'hit' : 'miss'
@@ -94,7 +94,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 
 		return res
 	} catch (err) {
-		if (err?.data?.repository === null) {
+		if (err && err.data && err.data.repository === null) {
 			const page = renderError('Page not found', `This page or repository either doesn't exist or it is set to private.`)
 			return new HTMLResponse(page, { status: 404 })
 		}

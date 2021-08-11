@@ -1,20 +1,22 @@
 <div align="center">
+
+<img src="https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/logoBackground.png" title="ReadMe.fish logo" alt="ReadMe.fish logo" width="128">
   
-# README Fish
+# ReadMe.fish
 
 [![Node CI](https://github.com/BetaHuhn/cf-worker-starter/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/cf-worker-starter/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/cf-worker-starter/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/cf-worker-starter/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/cf-worker-starter/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/cf-worker-starter)
 
-View a static version of the README.md from any public GitHub repository.
+Blazingly fast statically hosted GitHub READMEs
 
 </div>
 
 ## 👋 Introduction
 
-[README Fish](#) dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply go the [homepage](https://readme.fish) and specify the GitHub repo as the path, similar to how a repo is accessed on GitHub e.g. `readme.fish/username/repo`. Try [this](https://readme.fish/betahuhn/readme-fish) repo as an example!
+[ReadMe.fish](https://readme.fish) dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply go the [homepage](https://readme.fish) and specify the GitHub repo as the path, similar to how a repo is accessed on GitHub e.g. `readme.fish/username/repo`. Try [this](https://readme.fish/betahuhn/readme-fish) repo as an example!
 
 ## 📚 Usage
 
-[README Fish](#) generates a static HTML version of any public GitHub repo and caches it in a fast CDN. This might be useful for a variety of usecases. Maybe you want to quickly view a repos README without the clutter of the GitHub UI. Or you want a fast hosted version of your repos README file/documentation. You could even use it to host your own [mini website](https://readme.fish/betahuhn/betahuhn)!
+[ReadMe.fish](https://readme.fish) generates a static HTML version of any public GitHub repo and caches it in a fast CDN. This might be useful for a variety of usecases. Maybe you want to quickly view a repos README without the clutter of the GitHub UI. Or you want a fast hosted version of your repos README file/documentation. You could even use it to host your own [mini website](https://readme.fish/betahuhn/betahuhn)!
 
 ## 💻 Available commands
 

@@ -3,7 +3,7 @@ import { HTML, html } from '@worker-tools/html'
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default (errorTitle: string, message: string):HTML => {
-	const title = `${ errorTitle } - README Fish`
+	const title = `${ errorTitle } - ReadMe.fish`
 	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file.'
 	const image = 'https://cdn.mxis.ch/static/banner.png'
 

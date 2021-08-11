@@ -1,7 +1,7 @@
 {
 	"name": "readme-fish",
 	"version": "0.1.0",
-	"description": "View a static version of the README.md from any public GitHub repository.",
+	"description": "Blazingly fast statically hosted GitHub READMEs",
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint ./src/ --ext .ts",
