@@ -51,8 +51,8 @@ export default ():HTML => {
 	<style type='text/css'>
 		body {
 			font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-			color: #111;
-			background-color: #fdfdfd;
+			color: #dbdbdb;
+			background-color: #0b1828;
 			-webkit-text-size-adjust: 100%;
 			-webkit-font-feature-settings: "kern"1;
 			-moz-font-feature-settings: "kern"1;
@@ -74,10 +74,6 @@ export default ():HTML => {
 			max-width: 250px;
 		}
 
-		.image-wrapper h1 {
-			color: #152b46;
-		}
-
 		.image-wrapper p {
 			color: #49cb8a;
 			font-weight: 600;
@@ -97,7 +93,7 @@ export default ():HTML => {
 		body>#content {
 			margin: 0px;
 			max-width: 900px;
-			border: 1px solid #e1e4e8;
+			border: 1px solid #152b46;
 			padding: 10px 40px;
 			padding-bottom: 20px;
 			border-radius: 10px;
@@ -135,16 +131,16 @@ export default ():HTML => {
 * Links
 */
 		a {
-			color: #0366d6;
+			color: #49cb8a;
 			text-decoration: none;
 		}
 
 		a:visited {
-			color: #0366d6;
+			color: #49cb8a;
 		}
 
 		a:hover {
-			color: #0366d6;
+			color: #49cb8a;
 			text-decoration: underline;
 		}
 
@@ -162,7 +158,8 @@ export default ():HTML => {
 */
 
 		code {
-			background-color: rgba(27, 31, 35, .05);
+			background-color: rgb(21, 43, 70);
+			color: #a7cde6;
 			border-radius: 3px;
 			font-size: 85%;
 			margin: 0;
@@ -253,7 +250,7 @@ export default ():HTML => {
 			line-height: 24px;
 			font-weight: 400;
 			font-size: 16px;
-			color: #24292e;
+			color: #d6e6f0;
 		}
 
 		ul {
@@ -261,7 +258,7 @@ export default ():HTML => {
 		}
 
 		li {
-			color: #24292e;
+			color: #d6e6f0;
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 1.5;
@@ -273,19 +270,19 @@ export default ():HTML => {
 
 		* {
 			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-			color: #24292e;
+			color: #d6e6f0;
 		}
 
 		a:visited {
-			color: #0366d6;
+			color: #49cb8a;
 		}
 
 		h1,
 		h2,
 		h3 {
-			border-bottom: 1px solid #eaecef;
+			border-bottom: 1px solid #152b46;
 			padding-bottom: .3em;
-			color: #111;
+			color: #d6e6f0;
 			/* Darker */
 		}
 	</style>
