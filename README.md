@@ -4,7 +4,7 @@
   
 # ReadMe.fish
 
-[![Node CI](https://github.com/BetaHuhn/cf-worker-starter/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/cf-worker-starter/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/cf-worker-starter/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/cf-worker-starter/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/cf-worker-starter/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/cf-worker-starter)
+[![Node CI](https://github.com/BetaHuhn/readme-fish/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/readme-fish/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/readme-fish/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/readme-fish/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/readme-fish/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/readme-fish)
 
 Blazingly fast statically hosted GitHub READMEs
 
