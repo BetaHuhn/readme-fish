@@ -6,7 +6,7 @@ import renderHomepage from './templates/homepage'
 import renderError from './templates/error'
 
 const maxAge = 60 * 10 // * 10 // Cache expires after 10 minutes
-const maxAgeHomepage = 60 * 60 * 24 * 7 // Cache expires after 7 days
+const maxAgeHomepage = 60 * 60 // Cache expires after 1 hour
 
 declare const GH_PAT: string
 const octokit = new Octokit({ auth: GH_PAT })
@@ -23,7 +23,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 
 		// Render homepage
 		if (!requestPath || parts.length !== 2) {
-			const cacheKey = `https://readme.fish/homepage.html`
+			const cacheKey = `https://readme.fish/index.html`
 			let res = await cache.match(cacheKey)
 
 			if (!res) {
@@ -32,7 +32,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 				res = new HTMLResponse(page)
 				res = new Response(res.body, res)
 
-				res.headers.append('Cache-Control', `s-maxage=${ maxAgeHomepage }`)
+				res.headers.append('Cache-Control', `max-age=${ maxAgeHomepage }, stale-while-revalidate=30`)
 
 				event.waitUntil(cache.put(cacheKey, res.clone()))
 			}
@@ -88,7 +88,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 			res = new HTMLResponse(page)
 			res = new Response(res.body, res)
 
-			res.headers.append('Cache-Control', `s-maxage=${ maxAge }`)
+			res.headers.append('Cache-Control', `max-age=${ maxAge }, stale-while-revalidate=30`)
 			event.waitUntil(cache.put(cacheKey, res.clone()))
 		}
 
