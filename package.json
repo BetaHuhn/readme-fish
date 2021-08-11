@@ -1,0 +1,51 @@
+{
+	"name": "readme-worker",
+	"version": "0.1.0",
+	"description": "Starter Template for Cloudflare Workers with GitHub Actions CI and Automatic Releases",
+	"main": "index.js",
+	"scripts": {
+		"lint": "eslint ./src/ --ext .ts",
+		"test:clean": "rimraf ./transpiled/src ./transpiled/test",
+		"test": "npm run test:clean && npm run transpile && mocha --require source-map-support/register --recursive transpiled/test",
+		"transpile": "tsc --project ./test",
+		"dev": "wrangler dev",
+		"build": "webpack"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/betahuhn/readme-worker.git"
+	},
+	"keywords": [
+		"template",
+		"workers",
+		"cloudflare-workers",
+		"typescript",
+		"nodejs"
+	],
+	"author": "Maximilian Schiller <schiller@mxis.ch>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/betahuhn/readme-worker/issues"
+	},
+	"homepage": "https://github.com/betahuhn/readme-worker#readme",
+	"devDependencies": {
+		"@cloudflare/workers-types": "^2.2.2",
+		"@cloudflare/wrangler": "^1.19.0",
+		"@types/chai": "^4.2.21",
+		"@types/mocha": "^8.2.3",
+		"chai": "^4.3.4",
+		"mocha": "^8.4.0",
+		"rimraf": "^3.0.2",
+		"service-worker-mock": "^2.0.5",
+		"ts-loader": "^8.3.0",
+		"typescript": "^4.3.5",
+		"webpack": "^5.49.0",
+		"webpack-cli": "^4.7.2"
+	},
+	"dependencies": {
+		"@betahuhn/config": "^1.1.0",
+		"@typescript-eslint/eslint-plugin": "^4.29.1",
+		"@typescript-eslint/parser": "^4.29.1",
+		"eslint": "^7.32.0"
+	}
+}
