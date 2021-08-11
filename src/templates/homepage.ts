@@ -4,7 +4,7 @@ import { HTML, html } from '@worker-tools/html'
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default ():HTML => {
 	const title = 'ReadMe.fish - Static READMEs'
-	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file.'
+	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file with ReadMe.fish!'
 	const image = 'https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/social.png'
 
 	return html`
@@ -44,7 +44,7 @@ export default ():HTML => {
 			<article class="markdown-body entry-content container-lg" itemprop="text">
 			<h1>README.md</h1>
 			<p>ReadMe.fish dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply specify the GitHub repo as the path of this website, similar to how a repo is accessed on GitHub e.g. <code>readme.fish/username/repo</code>.</p>
-			<p>Try <a href="/betahuhn/readme-fish">this</a> repo as an example!</p>
+			<p>Try <a href="/betahuhn/betahuhn">this</a> repo as an example!</p>
 			<p>
 				<a href="https://github.com/BetaHuhn/readme-fish">Source on GitHub</a>
 				 - 

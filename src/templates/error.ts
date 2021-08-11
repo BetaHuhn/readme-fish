@@ -4,7 +4,7 @@ import { HTML, html } from '@worker-tools/html'
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default (errorTitle: string, message: string):HTML => {
 	const title = `${ errorTitle } - ReadMe.fish`
-	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file.'
+	const description = 'Blazingly fast statically hosted GitHub READMEs. View a HTML version of any public GitHub repositories README.md file with ReadMe.fish!'
 	const image = 'https://readme-fish.fra1.cdn.digitaloceanspaces.com/static/social.png'
 
 	return html`
@@ -39,7 +39,7 @@ export default (errorTitle: string, message: string):HTML => {
 			<article class="markdown-body entry-content container-lg" itemprop="text">
 			<h1>Whoops! - ${ errorTitle }</h1>
 			<p>${ message }</p>
-			<p>Make sure you haven't misspelled anything or maybe try a different repository like <a href="/betahuhn/readme-fish">this</a> one!</p>
+			<p>Make sure you haven't misspelled anything or maybe try a different repository like <a href="/betahuhn/betahuhn">this</a> one!</p>
 			<p>
 				<a href="https://github.com/BetaHuhn/readme-fish">Source on GitHub</a>
 				 - 

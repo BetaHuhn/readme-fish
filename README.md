@@ -12,7 +12,7 @@ Blazingly fast statically hosted GitHub READMEs
 
 ## 👋 Introduction
 
-[ReadMe.fish](https://readme.fish) dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply go the [homepage](https://readme.fish) and specify the GitHub repo as the path, similar to how a repo is accessed on GitHub e.g. `readme.fish/username/repo`. Try [this](https://readme.fish/betahuhn/readme-fish) repo as an example!
+[ReadMe.fish](https://readme.fish) dynamicly generates a blazingly fast static HTML version of any public GitHub repos README.md file and caches it on a CDN using CloudFlare Workers. Simply go the [homepage](https://readme.fish) and specify the GitHub repo as the path, similar to how a repo is accessed on GitHub e.g. `readme.fish/username/repo`. Try [this](https://readme.fish/betahuhn/betahuhn) repo as an example!
 
 ## 📚 Usage
 
