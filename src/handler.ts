@@ -11,6 +11,8 @@ const maxAgeHomepage = 60 * 60 // Cache expires after 1 hour
 declare const GH_PAT: string
 const octokit = new Octokit({ auth: GH_PAT })
 
+const useCache = false
+
 // eslint-disable-next-line no-undef
 export async function handleRequest(event: FetchEvent): Promise<Response> {
 	try {
@@ -26,7 +28,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 			const cacheKey = `https://readme.fish/index.html`
 			let res = await cache.match(cacheKey)
 
-			if (!res) {
+			if (!res || !useCache) {
 				const page = renderHomepage()
 
 				res = new HTMLResponse(page)
@@ -51,7 +53,7 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 		const cacheStatus = res ? 'hit' : 'miss'
 		console.log(`Cache ${ cacheStatus }`)
 
-		if (!res) {
+		if (!res || !useCache) {
 			const { repository } = await octokit.graphql(`
 				query repo($owner: String!, $repo: String!) {
 					repository(owner: $owner, name: $repo) {
@@ -81,8 +83,13 @@ export async function handleRequest(event: FetchEvent): Promise<Response> {
 
 			const page = renderReadMe({
 				title: `${ repository.nameWithOwner } - README.md`,
+				name: repository.name,
+				owner: repo.owner,
 				description: repository.description,
-				image: repository.openGraphImageUrl
+				image: repository.openGraphImageUrl,
+				url: repository.url,
+				homepage: repository.homepageUrl,
+				stars: repository.stargazerCount
 			}, content as unknown as string)
 
 			res = new HTMLResponse(page)
